@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/clion_web_server_project.dir/main.cpp.o -o clion_web_server_project 

@@ -1,0 +1,3 @@
+/home/bay/文档/cpp/project/cppServer/day4/cmake-build-debug/CMakeFiles/clion_web_server_project.dir
+/home/bay/文档/cpp/project/cppServer/day4/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/bay/文档/cpp/project/cppServer/day4/cmake-build-debug/CMakeFiles/rebuild_cache.dir

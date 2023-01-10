@@ -9,6 +9,8 @@
 #include <cstdio>
 #include <cerrno>
 #include <utility>
+#include "Buffer.h"
+#include "util.h"
 
 #define READ_BUFFER 1024
 
@@ -17,11 +19,13 @@ Connection::Connection(EventLoop *_loop, Socket *_sock):loop(_loop), sock(_sock)
     std::function<void()>cb = [this, capture0 = sock->getFd()] { echo(capture0); };
     channel->setCallback(cb);
     channel->enableReading();
+    readBuffer = new Buffer();
 }
 
 Connection::~Connection() {
     delete channel;
     delete sock;
+//    delete readBuffer;
 }
 
 // 响应读事件
@@ -31,13 +35,17 @@ void Connection::echo(int sockfd) {
         bzero(&buf, sizeof(buf));
         ssize_t bytes_read = read(sockfd, buf, sizeof(buf));
         if (bytes_read > 0){
-            printf("message from client fd %d: %s\n", sockfd, buf);
-            write(sockfd, buf, sizeof(buf));
+            readBuffer->append(buf, bytes_read);
+//            printf("message from client fd %d: %s\n", sockfd, buf);
+//            write(sockfd, buf, sizeof(buf));
         } else if(bytes_read == -1 && errno == EINTR){
             printf("Continue reading");
             continue;
         } else if(bytes_read == -1 &&((errno == EAGAIN) || (errno == EWOULDBLOCK))){
             printf("finish reading once, errno: %d\n", sockfd);
+            printf("message from client fd %d: %s\n", sockfd, readBuffer->c_str());
+            errif(-1 == write(sockfd, readBuffer->c_str(), readBuffer->size()), "socket write error");
+            readBuffer->clear();
         } else if(bytes_read == 0){
             printf("EOF, client fd %d disconnect\n", sockfd);
             deleteConnectionCallback(sock);
