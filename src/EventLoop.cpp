@@ -15,12 +15,13 @@ EventLoop::~EventLoop(){
 void EventLoop::loop(){
     while(!quit){
         std::vector<Channel*> chs;
-        chs = ep->poll();
+        chs = ep->poll(); // 返回所有触发的channel
         for (auto it = chs.begin(); it != chs.end(); it++){
-            (*it)->handleEvent();
+            (*it)->handleEvent();  // 处理每一个channel
         }
     }
 }
+
 
 void EventLoop::updateChannel(Channel *ch){
     ep->updateChannel(ch);

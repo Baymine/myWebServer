@@ -3,6 +3,12 @@
 #include <functional>
 class EventLoop;
 
+/**
+ * epoll中的data其实是一个union类型，可以储存一个指针。而通过指针，理论上我们可以指向任何一个地址块的内容，可以是一个类的对象，
+ *
+ * 这样就可以将一个文件描述符封装成一个Channel类，一个Channel类自始至终只负责一个文件描述符，对不同的服务、不同的事件类型，
+ * 都可以在类中进行不同的处理，而不是仅仅拿到一个int类型的文件描述符。
+ */
 class Channel{
 private:
     EventLoop *loop;
@@ -16,14 +22,14 @@ public:
     Channel(EventLoop *_loop, int _fd);
     ~Channel();
 
-    void handleEvent();
-    void enableReading();
+    void handleEvent();  // 处理事件，调用回调函数
+    void enableReading();  //  设置监听事件以及模式，并更新channel
 
     int getFd();
     uint32_t getEvents();
     uint32_t getRevents();
-    bool getInEpoll();
-    void setInEpoll();
+    bool getInEpoll();  // inEpoll
+    void setInEpoll();  // inEpoll = true;
 
     void setRevents(uint32_t);
     void setCallback(std::function<void()>);

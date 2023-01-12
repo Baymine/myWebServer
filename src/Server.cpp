@@ -29,7 +29,7 @@
 Server::Server(EventLoop *_loop):loop(_loop), acceptor(nullptr){
     acceptor = new Acceptor(loop);
     std::function<void(Socket*)> cb = std::bind(&Server::newConnection, this, std::placeholders::_1);
-    acceptor->setNewConnectionCallback(cb);
+    acceptor->setNewConnectionCallback(cb);  // 设置创建连接的回调函数
 }
 
 Server::~Server() { 
@@ -43,11 +43,11 @@ void Server::handleReadEvent(int sockfd){
         bzero(&buf, sizeof(buf));
         ssize_t bytes_read = read(sockfd, buf, sizeof(buf));
         if(bytes_read > 0){
-            printf("message fron client fd %d: %s\n", sockfd, buf);
+            printf("message from client fd %d: %s\n", sockfd, buf);
             write(sockfd, buf, sizeof(buf));
         //非阻塞IO，这个条件表示数据全部读取完毕
         } else if(bytes_read == -1 && ((errno == EAGAIN) || (errno == EWOULDBLOCK))){
-            printf("finish reading once, erro:%d\n", errno);
+            printf("finish reading once, error:%d\n", errno);
             break;
         // EOF， 客户端断开连接
         } else if(bytes_read == 0){

@@ -2,9 +2,9 @@
 #include "src/Server.h"
 
 int main(){
-    EventLoop *loop = new EventLoop();
+    EventLoop *loop = new EventLoop();  // Main reactor
     Server *server = new Server(loop);
-    loop->loop();
+    loop->loop();  // 处理所有触发的事件
     return 0;
 }
 

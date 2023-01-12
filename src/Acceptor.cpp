@@ -5,12 +5,14 @@
 #include "Server.h"
 
 Acceptor::Acceptor(EventLoop *_loop) : loop(_loop){
+    // 新建sock
     sock = new Socket();
     addr = new InetAddress("127.0.0.1", 8888);
     sock->bind(addr);
     sock->listen();
     sock->setnonblocking();
 
+    // 初始化channel
     acceptChannel = new Channel(loop, sock->getFd());
     std::function<void()> cb = std::bind(&Acceptor::acceptChannel, this);
     acceptChannel->setCallback(cb);

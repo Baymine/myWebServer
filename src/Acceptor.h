@@ -8,7 +8,7 @@ class Channel;
 class Acceptor{
 private:
     EventLoop *loop;
-    Socket *sock;
+    Socket *sock;  // 包含所有连接的信息
     InetAddress *addr;
     Channel *acceptChannel;
 
