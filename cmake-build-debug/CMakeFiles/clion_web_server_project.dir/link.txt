@@ -1,1 +1,1 @@
-/usr/bin/c++ -g CMakeFiles/clion_web_server_project.dir/main.cpp.o -o clion_web_server_project 
+/usr/bin/c++ -g CMakeFiles/clion_web_server_project.dir/main.cpp.o CMakeFiles/clion_web_server_project.dir/ThreadPool/main.cpp.o CMakeFiles/clion_web_server_project.dir/src/ThreadPool.cpp.o -o clion_web_server_project 

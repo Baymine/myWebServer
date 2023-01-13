@@ -129,6 +129,30 @@ clion_web_server_project/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/clion_web_server_project.dir/build.make CMakeFiles/clion_web_server_project.dir/build
 .PHONY : clion_web_server_project/fast
 
+ThreadPool/main.o: ThreadPool/main.cpp.o
+.PHONY : ThreadPool/main.o
+
+# target to build an object file
+ThreadPool/main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/clion_web_server_project.dir/build.make CMakeFiles/clion_web_server_project.dir/ThreadPool/main.cpp.o
+.PHONY : ThreadPool/main.cpp.o
+
+ThreadPool/main.i: ThreadPool/main.cpp.i
+.PHONY : ThreadPool/main.i
+
+# target to preprocess a source file
+ThreadPool/main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/clion_web_server_project.dir/build.make CMakeFiles/clion_web_server_project.dir/ThreadPool/main.cpp.i
+.PHONY : ThreadPool/main.cpp.i
+
+ThreadPool/main.s: ThreadPool/main.cpp.s
+.PHONY : ThreadPool/main.s
+
+# target to generate assembly for a file
+ThreadPool/main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/clion_web_server_project.dir/build.make CMakeFiles/clion_web_server_project.dir/ThreadPool/main.cpp.s
+.PHONY : ThreadPool/main.cpp.s
+
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -153,6 +177,30 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/clion_web_server_project.dir/build.make CMakeFiles/clion_web_server_project.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+src/ThreadPool.o: src/ThreadPool.cpp.o
+.PHONY : src/ThreadPool.o
+
+# target to build an object file
+src/ThreadPool.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/clion_web_server_project.dir/build.make CMakeFiles/clion_web_server_project.dir/src/ThreadPool.cpp.o
+.PHONY : src/ThreadPool.cpp.o
+
+src/ThreadPool.i: src/ThreadPool.cpp.i
+.PHONY : src/ThreadPool.i
+
+# target to preprocess a source file
+src/ThreadPool.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/clion_web_server_project.dir/build.make CMakeFiles/clion_web_server_project.dir/src/ThreadPool.cpp.i
+.PHONY : src/ThreadPool.cpp.i
+
+src/ThreadPool.s: src/ThreadPool.cpp.s
+.PHONY : src/ThreadPool.s
+
+# target to generate assembly for a file
+src/ThreadPool.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/clion_web_server_project.dir/build.make CMakeFiles/clion_web_server_project.dir/src/ThreadPool.cpp.s
+.PHONY : src/ThreadPool.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -162,9 +210,15 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... clion_web_server_project"
+	@echo "... ThreadPool/main.o"
+	@echo "... ThreadPool/main.i"
+	@echo "... ThreadPool/main.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... src/ThreadPool.o"
+	@echo "... src/ThreadPool.i"
+	@echo "... src/ThreadPool.s"
 .PHONY : help
 
 

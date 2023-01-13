@@ -82,7 +82,16 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/bay/文档/cpp/project/cppServer/day4/ThreadPool/main.cpp">
+			<Option target="clion_web_server_project"/>
+		</Unit>
 		<Unit filename="/home/bay/文档/cpp/project/cppServer/day4/main.cpp">
+			<Option target="clion_web_server_project"/>
+		</Unit>
+		<Unit filename="/home/bay/文档/cpp/project/cppServer/day4/src/ThreadPool.cpp">
+			<Option target="clion_web_server_project"/>
+		</Unit>
+		<Unit filename="/home/bay/文档/cpp/project/cppServer/day4/src/ThreadPool.h">
 			<Option target="clion_web_server_project"/>
 		</Unit>
 		<Unit filename="/home/bay/文档/cpp/project/cppServer/day4/CMakeLists.txt">
