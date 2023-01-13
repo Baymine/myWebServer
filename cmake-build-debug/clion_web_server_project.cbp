@@ -82,7 +82,7 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/bay/文档/cpp/project/cppServer/day4/ThreadPool/main.cpp">
+		<Unit filename="/home/bay/文档/cpp/project/cppServer/day4/ThreadPoolTest.cpp">
 			<Option target="clion_web_server_project"/>
 		</Unit>
 		<Unit filename="/home/bay/文档/cpp/project/cppServer/day4/main.cpp">

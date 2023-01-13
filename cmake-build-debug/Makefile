@@ -129,29 +129,29 @@ clion_web_server_project/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/clion_web_server_project.dir/build.make CMakeFiles/clion_web_server_project.dir/build
 .PHONY : clion_web_server_project/fast
 
-ThreadPool/main.o: ThreadPool/main.cpp.o
-.PHONY : ThreadPool/main.o
+ThreadPoolTest.o: ThreadPoolTest.cpp.o
+.PHONY : ThreadPoolTest.o
 
 # target to build an object file
-ThreadPool/main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/clion_web_server_project.dir/build.make CMakeFiles/clion_web_server_project.dir/ThreadPool/main.cpp.o
-.PHONY : ThreadPool/main.cpp.o
+ThreadPoolTest.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/clion_web_server_project.dir/build.make CMakeFiles/clion_web_server_project.dir/ThreadPoolTest.cpp.o
+.PHONY : ThreadPoolTest.cpp.o
 
-ThreadPool/main.i: ThreadPool/main.cpp.i
-.PHONY : ThreadPool/main.i
+ThreadPoolTest.i: ThreadPoolTest.cpp.i
+.PHONY : ThreadPoolTest.i
 
 # target to preprocess a source file
-ThreadPool/main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/clion_web_server_project.dir/build.make CMakeFiles/clion_web_server_project.dir/ThreadPool/main.cpp.i
-.PHONY : ThreadPool/main.cpp.i
+ThreadPoolTest.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/clion_web_server_project.dir/build.make CMakeFiles/clion_web_server_project.dir/ThreadPoolTest.cpp.i
+.PHONY : ThreadPoolTest.cpp.i
 
-ThreadPool/main.s: ThreadPool/main.cpp.s
-.PHONY : ThreadPool/main.s
+ThreadPoolTest.s: ThreadPoolTest.cpp.s
+.PHONY : ThreadPoolTest.s
 
 # target to generate assembly for a file
-ThreadPool/main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/clion_web_server_project.dir/build.make CMakeFiles/clion_web_server_project.dir/ThreadPool/main.cpp.s
-.PHONY : ThreadPool/main.cpp.s
+ThreadPoolTest.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/clion_web_server_project.dir/build.make CMakeFiles/clion_web_server_project.dir/ThreadPoolTest.cpp.s
+.PHONY : ThreadPoolTest.cpp.s
 
 main.o: main.cpp.o
 .PHONY : main.o
@@ -210,9 +210,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... clion_web_server_project"
-	@echo "... ThreadPool/main.o"
-	@echo "... ThreadPool/main.i"
-	@echo "... ThreadPool/main.s"
+	@echo "... ThreadPoolTest.o"
+	@echo "... ThreadPoolTest.i"
+	@echo "... ThreadPoolTest.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

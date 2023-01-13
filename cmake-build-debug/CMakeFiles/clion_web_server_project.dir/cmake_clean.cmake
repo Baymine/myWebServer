@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/clion_web_server_project.dir/ThreadPool/main.cpp.o"
-  "CMakeFiles/clion_web_server_project.dir/ThreadPool/main.cpp.o.d"
+  "CMakeFiles/clion_web_server_project.dir/ThreadPoolTest.cpp.o"
+  "CMakeFiles/clion_web_server_project.dir/ThreadPoolTest.cpp.o.d"
   "CMakeFiles/clion_web_server_project.dir/main.cpp.o"
   "CMakeFiles/clion_web_server_project.dir/main.cpp.o.d"
   "CMakeFiles/clion_web_server_project.dir/src/ThreadPool.cpp.o"

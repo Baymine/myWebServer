@@ -5,6 +5,8 @@ int main(){
     EventLoop *loop = new EventLoop();  // Main reactor
     Server *server = new Server(loop);
     loop->loop();  // 处理所有触发的事件
+    delete server;
+    delete loop;
     return 0;
 }
 
