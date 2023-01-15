@@ -11,6 +11,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/bay/文档/cpp/project/cppServer/day4/ThreadPoolTest.cpp" "CMakeFiles/clion_web_server_project.dir/ThreadPoolTest.cpp.o" "gcc" "CMakeFiles/clion_web_server_project.dir/ThreadPoolTest.cpp.o.d"
   "/home/bay/文档/cpp/project/cppServer/day4/main.cpp" "CMakeFiles/clion_web_server_project.dir/main.cpp.o" "gcc" "CMakeFiles/clion_web_server_project.dir/main.cpp.o.d"
   "/home/bay/文档/cpp/project/cppServer/day4/src/ThreadPool.cpp" "CMakeFiles/clion_web_server_project.dir/src/ThreadPool.cpp.o" "gcc" "CMakeFiles/clion_web_server_project.dir/src/ThreadPool.cpp.o.d"
+  "/home/bay/文档/cpp/project/cppServer/day4/test.cpp" "CMakeFiles/clion_web_server_project.dir/test.cpp.o" "gcc" "CMakeFiles/clion_web_server_project.dir/test.cpp.o.d"
   )
 
 # Targets to which this target links.

@@ -201,6 +201,30 @@ src/ThreadPool.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/clion_web_server_project.dir/build.make CMakeFiles/clion_web_server_project.dir/src/ThreadPool.cpp.s
 .PHONY : src/ThreadPool.cpp.s
 
+test.o: test.cpp.o
+.PHONY : test.o
+
+# target to build an object file
+test.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/clion_web_server_project.dir/build.make CMakeFiles/clion_web_server_project.dir/test.cpp.o
+.PHONY : test.cpp.o
+
+test.i: test.cpp.i
+.PHONY : test.i
+
+# target to preprocess a source file
+test.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/clion_web_server_project.dir/build.make CMakeFiles/clion_web_server_project.dir/test.cpp.i
+.PHONY : test.cpp.i
+
+test.s: test.cpp.s
+.PHONY : test.s
+
+# target to generate assembly for a file
+test.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/clion_web_server_project.dir/build.make CMakeFiles/clion_web_server_project.dir/test.cpp.s
+.PHONY : test.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -219,6 +243,9 @@ help:
 	@echo "... src/ThreadPool.o"
 	@echo "... src/ThreadPool.i"
 	@echo "... src/ThreadPool.s"
+	@echo "... test.o"
+	@echo "... test.i"
+	@echo "... test.s"
 .PHONY : help
 
 

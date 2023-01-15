@@ -43,12 +43,12 @@ ThreadPool::~ThreadPool(){
 }
 
 // 添加一个任务到队列中
-void ThreadPool::add(std::function<void()> func){
-    {
-        std::unique_lock<std::mutex> lock(tasks_mtx);
-        if(stop)
-            throw std::runtime_error("ThreadPoll already stop, can't add task any more");
-        tasks.emplace(func);
-    }
-    cv.notify_one();  //通知一次条件变量
-}
+//void ThreadPool::add(std::function<void()> func){
+//    {
+//        std::unique_lock<std::mutex> lock(tasks_mtx);
+//        if(stop)
+//            throw std::runtime_error("ThreadPoll already stop, can't add task any more");
+//        tasks.emplace(func);
+//    }
+//    cv.notify_one();  //通知一次条件变量
+//}

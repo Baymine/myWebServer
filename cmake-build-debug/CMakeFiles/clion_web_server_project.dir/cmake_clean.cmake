@@ -5,6 +5,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/clion_web_server_project.dir/main.cpp.o.d"
   "CMakeFiles/clion_web_server_project.dir/src/ThreadPool.cpp.o"
   "CMakeFiles/clion_web_server_project.dir/src/ThreadPool.cpp.o.d"
+  "CMakeFiles/clion_web_server_project.dir/test.cpp.o"
+  "CMakeFiles/clion_web_server_project.dir/test.cpp.o.d"
   "clion_web_server_project"
   "clion_web_server_project.pdb"
 )
